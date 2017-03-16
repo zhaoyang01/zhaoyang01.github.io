@@ -12,8 +12,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: https://github.com/zhaoyang01
+root: /zhaoyang01.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -70,4 +70,4 @@ theme: Next
 deploy:
   type: git
   repository: https://github.com/zhaoyang01/zhaoyang01.github.io.git
-  branch: master
+  branch: Blog
