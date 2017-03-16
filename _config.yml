@@ -70,4 +70,4 @@ theme: Next
 deploy:
   type: git
   repository: https://github.com/zhaoyang01/zhaoyang01.github.io
-  branch: Blog
+  branch: master
