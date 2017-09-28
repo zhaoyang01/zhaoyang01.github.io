@@ -1,645 +1,409 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/public/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/public/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/public/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT, Your Hreo, 琥珀" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.jpg?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://github.com/zhaoyang01/zhaoyang01.github.io/2017/03/03/hello-world/index.html">
-<meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-03-03T09:15:05.980Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/public/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://github.com/zhaoyang01/zhaoyang01.github.io/2017/03/03/hello-world/"/>
-
-
-
-
-
-  <title> Hello World | Hello World </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="./public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./public/css/docdesk.css">
+	<script src="./public/js/jquery-3.2.1.min.js" ></script>
+	<script src="./public/js/bootstrap.min.js" ></script>
 </head>
+<body>
+<div id="grid">
+	<div id="nav" class="hidden-xs">
+		<!-- 检索栏 -->
+		<div id="fileSearch">
+			<label for="search" class="glyphicon glyphicon-search"></label>
+			<input type="text" name="search" class="hidden-xs" placeholder="检索" />
+		</div>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+		<!-- 信息列表 -->
+		<div id="leftNav">
+			<div class="dropdown">
+			    <a id="showFlodMenu" class="btn btn-default" data-toggle="collapse" data-target="#flodMenu"  aria-expanded="true" >
+			        <i class="glyphicon glyphicon-menu-up"></i>
+			        <span id="userName">yourName</span>
+			    </a>
+			    <ul id="flodMenu" class="dropdown-menu dropdown-menu-right collapse in" aria-expanded="true" >
+			        <li class="selected"><a href="#">文件</a></li>
+			        <li><a href="#">共享给我的</a></li>
+			        <li><a href="#">回收站</a></li>
+			    </ul>
+			</div>
+		</div>
 
-  
+	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/public/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hello World</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+	<div id="main">
+		<!-- 工具栏 -->
+		<div id="tools">
+			<!-- 文件工具 -->
+			<ul id="fileTools" class="nav nav-pills hidden-xs">
+			1
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docNew" data-toggle="dropdown">
+				        <i class="glyphicon glyphicon-plus" ></i>
+						<span>新建</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docNew">
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">文件夹</a></li>
+		                <li role="separator" class="divider">分割线</li>
+				        <li>
+							<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">World 文档</a>
+			        	</li>
+				        <li>
+							<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">Excel 工作簿</a>
+			        	</li>
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">PowerPoint 演示文稿</a>
+			        	</li>
+				    </ul>
+				</li>
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docUpdata" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-upload" ></i>
+						<span>上传</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu" aria-labelledby="docUpdata">
+				        <li><a href="#">文&nbsp;件</a></li>
+				        <li><a href="#">文件夹</a></li>
+				    </ul>
+				</li>
+				<li name="auto">
+				    <a href="#">
+						<i class="glyphicon glyphicon-refresh" ></i>
+						<span>同步</span>
+				    </a>
+				</li>
+				<li name="file" class="dropdown sr-only">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docOpen" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-book" ></i>
+						<span>打开</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docOpen">
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">在X中打开</a>
+				        </li>
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">在Y中打开</a>
+			        	</li>
+				    </ul>
+				</li>
+				<li name="sigle" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-send" ></i>
+						<span>共享</span>
+					</a>
+				</li>
+				<li name="sigle" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-link" ></i>
+						<span>获取链接</span>
+					</a>
+				</li>
+				<li name="file" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-download" ></i>
+						<span>下载</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-trash" ></i>
+						<span>删除</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-share-alt" ></i>
+						<span>移动到</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-duplicate" ></i>
+						<span>复制到</span>
+					</a>
+				</li>
+				<li name="rename" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-edit" ></i>
+						<span>重命名</span>
+					</a>
+				</li>
+				<li name="file" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-leaf" ></i>
+						<span>版本历史记录</span>
+					</a>
+				</li>
+				<!-- <li id="toolsDialog-mobile" class="sr-only"></li> -->
+			</ul>
+			<!-- 移动端文件工具 -->
+			<div id="fileTools-mobile">
+			2
+				<div name id="fileSearch-mobile" class="visible-xs-inline-block">
+					<label for="search" class="glyphicon glyphicon-search"></label>
+					<input type="text" name="search" class="sr-only" placeholder="检索" />
+				</div>
+				<div id="firstTool-mobile" class="visible-xs-inline-block">
+					<i class="glyphicon glyphicon-plus"></i>
+				</div>
+			    <div id="toolShow-mobile" class="navbar-header visible-xs-inline-block">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fileTools" aria-expanded="false" id="tools-mobile">
+						<i class="glyphicon glyphicon-option-horizontal"></i>
+					</button>
+				</div>
+			</div>
+			<!-- 文件夹工具 -->
+			<ul id="flodTools" class="nav nav-pills">
+			3
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docSort" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-sort-by-attributes-alt" ></i>
+						<span class="hidden-xs">
+							排序
+							<i class="glyphicon glyphicon-menu-down" ></i>
+						</span>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docSort">
+				        <li>
+				        	<i class="glyphicon glyphicon-ok" ></i>
+				        	<a href="#">功能</a>
+				        </li>
+		                <li role="separator" class="divider">分割线</li>
+				        <li>
+				        	<i class="glyphicon glyphicon-ok" ></i>
+				        	<a href="#">升序</a>
+			        	</li>
+				        <li><a href="#">降序</a></li>
+				    </ul>
+				</li>
+				<li name="auto">
+					<a href="#">
+						<i class="glyphicon glyphicon-th-list" ></i>
+					</a>
+				</li>
+				<li name="file" class="sr-only hidden-xs">
+					<a href="#">
+						<span>已选中<span>X</span>项</span>
+						<i class="glyphicon glyphicon-remove" ></i>
+					</a>
+				</li>
+				<li name="keep" class="hidden-xs">
+					<a href="#">
+						<i class="glyphicon glyphicon glyphicon-info-sign" ></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="fileDirectory">
+				<h2 id="flodPower">文件</h2>
+				<div id="fileMenu" class="sr-only">
+					<p>
+						<span>文件</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-menu-right"></i>
+						<span>文件</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-menu-right"></i>
+						<span>文件</span>
+					</p>
+				</div>
+			</div>
+			<!-- 文件列表 -->
+			<div id="fileList" class="panel panel-default">
+			  <table class="table">
+			  	<thead class="hidden-xs">
+					<tr>
+						<th><i class="glyphicon glyphicon-ok"></i></th>
+						<th class="fileName">文件名</th>
+						<th class="editTime">修改时间</th>
+						<th class="editor">修改人</th>
+						<th class="fileSize">文件大小</th>
+						<th class="fileshare">共享</th>
+					</tr>
+			    </thead>
+			    <tbody>
+				    <tr>
+				    	<td class="hidden-xs"><i class="glyphicon glyphicon-ok-circle"></i></td>
+				    	<td class="visible-xs-inline-block"><i class="glyphicon glyphicon-ok-circle"></i></td>
+				    	<td class="fileName">这是文件夹</td>
+				    	<td class="editTime">修改时间</td>
+				    	<td class="editor hidden-xs">修改人</td>
+				    	<td class="fileSize hidden-xs">文件大小</td>
+				    	<td class="fileshare hidden-xs">共享</td>
+				    </tr>
+				    <tr class="selected">
+				    	<td class="col-xs-"><i class="glyphicon glyphicon-ok"></i></td>
+				    	<td class="fileName">这是文件</td>
+				    	<td class="editTime">修改时间</td>
+				    	<td class="editor hidden-xs">修改人</td>
+				    	<td class="fileSize hidden-xs">文件大小</td>
+				    	<td class="fileshare hidden-xs">共享</td>
+				    </tr>
+			    </tbody>
+			  </table>
+			</div>
+		</div>
+	</div>
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/public/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/public/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/public/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://github.com/zhaoyang01/zhaoyang01.github.io/public/2017/03/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhaoY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/public/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Hello World
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T17:15:05+08:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-        
-      
-
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-          
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/public/images/avatar.gif"
-               alt="ZhaoY" />
-          <p class="site-author-name" itemprop="name">ZhaoY</p>
-           
-              <p class="site-description motion-element" itemprop="description">世界很大，应该去看看</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/public/archives">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">ZhaoY</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-    
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  <script type="text/javascript" src="/public/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/public/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/public/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/public/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/public/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/public/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/public/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/public/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/public/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/public/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/public/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/public/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/public/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
 </body>
+<script>
+$(function(){
+	//docDisk
+	var docDisk = {
+		init: function(){
+			this.renderData();
+			this.bindEvent();
+			func.checkStatus();
+		},
+		//渲染数据
+		renderData: function(){
+
+		},
+		//事件绑定
+		bindEvent: function(){
+			// 下拉菜单优化
+			$('.dropdown').on('show.bs.dropdown', function(){
+				$(this).closest('li').addClass('hover');
+				$(this).find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+			}).on('hide.bs.dropdown', function(){
+				$(this).closest('li').removeClass('hover');
+				$(this).find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down')
+			});
+			/******
+			* 顶部工具栏事件
+			******/
+			// PC端检索栏
+			$('#fileSearch input[name="search"]').on('click', function(){
+				$(this).siblings('label').addClass('sr-only')
+			});
+
+			$('#fileSearch input[name="search"]').on('blur',function(){
+				$(this).siblings('label').removeClass('sr-only glyphicon-arrow-right').addClass('glyphicon-search');
+			});
+
+			// 移动端检索栏
+			$('#fileSearch-mobile label').on('click', function(){
+				$(this).siblings('input').removeClass('sr-only').focus();
+				$(this).removeClass('glyphicon-search').addClass('glyphicon-arrow-right');
+			});
+
+			$('#fileSearch-mobile input[name="search"]').on('blur',function(){
+				$('#fileSearch-mobile label').removeClass('sr-only glyphicon-arrow-right').addClass('glyphicon-search');
+				$('#fileSearch-mobile input').addClass('sr-only');
+			});
+
+			// 移动端首个功能图标
+
+			// 移动端更多功能图标
+			$('#fileTools').on('show.bs.collapse', function(){
+				$(this).removeClass('hidden-xs').addClass('mobile');
+				$('#fileTools .glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-right');
+				$('#toolsDialog-mobile').removeClass('sr-only');
+
+				// 调整弹窗的高度 减去首个和弹窗
+				let len = $('#fileTools>li:not(.sr-only)').length - 2;
+				if($('#toolsDialog-mobile').height() !== '80px')$('#toolsDialog-mobile').height(len*40 + 'px');
+			});
+
+			$('#fileTools').on('blur', function(){
+				if(!$('.mobile').length) return false;
+				$('#fileTools').collapse('hide');
+			});
+
+
+			/******
+			* 左侧导航栏事件
+			******/
+			// 左侧下拉菜单事件切换
+			$('#flodMenu').on('shown.bs.collapse', function(){
+			  	$(this).siblings('#showFlodMenu').find('.glyphicon').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+			})
+			$('#flodMenu').on('hide.bs.collapse', function(){
+				$(this).siblings('#showFlodMenu').find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+			})
+
+			// 左侧下拉菜单点击事件
+			$('#flodMenu li').on('click', function(){
+				const flodName = $(this).find('a').html();
+				// 标签样式切换
+				if(!$(this).hasClass('selected')){
+					var foldPower = $(this).siblings('li');
+					foldPower.removeClass('selected');
+					$(this).addClass('selected');
+				};
+				// 文件显示刷新
+				$('#fileDirectory>h2').text(flodName);
+				$('#fileDirectory h3:first-child').text(flodName);
+			});
+
+			/******
+			* 文件显示区域事件
+			******/
+
+
+			/******
+			* 右侧工具栏事件
+			******/
+		}
+	},
+	//func 公共方法
+	func = {
+		/******
+		* 导航栏按钮分类 .nav li[name]
+		* @ auto: 默认功能,未选中时生效，新建，上传，同步，排序，视图
+		* @ sigle: 单文件选中有效[文件夹中未选中]，共享，获取链接
+		* @ base: 选中即生效，删除，移动，复制
+		* @ file: 选中文件时生效，打开，下载，选中数量，版本历史记录
+		* @ 独立生效 keep: 选中对象信息, rename: 重命名
+		******/
+		// 获取选中信息
+		getStatus: function(){
+			let status = {
+				level: 0,			// 层级
+				isSleected: false,	// 选中文件
+				isSigle: false,		// 选中数量是否为 1
+				isFile: false       // 单选对象是否文件
+			};
+			return status
+		},
+		// 状态校验
+		checkStatus: function(){
+			const status = this.getStatus();
+			console.log(status);
+			// 隐藏原有的按钮 && 显示新的按钮
+			$('#tool-grid li[name]:not([name="keep"])').addClass('sr-only');
+			if(!status.isSleected){
+				$('#tool-grid li[name="auto"]').removeClass('sr-only');
+				if(status.level !== 0) $('#tool-grid li[name="sigle"]').removeClass('sr-only');
+			}else if(status.isSigle){
+				$('#tool-grid li[name="sigle"], #tool-grid li[name="rename"], #tool-grid li[name="base"]').removeClass('sr-only');
+				if(status.isFile) $('#tool-grid li[name="file"]').removeClass('sr-only');
+			}else{
+				$('#tool-grid li[name="base"]').removeClass('sr-only');
+			}
+		}
+	};
+
+	docDisk.init();
+});
+
+</script>
 </html>
