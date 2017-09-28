@@ -1,0 +1,500 @@
+/******
+* 样式重构
+******/
+body{
+	font-family: "Segoe UI Regular WestEuropean", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+input{
+	border: 0;
+	outline: 0;
+}
+
+h1, h2,h3{
+	margin: 0;
+}
+
+/******
+* bs全局样式重构
+******/
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus,
+:focus{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	outline: 0;
+}
+
+.dropdown-menu{
+	border-color: #f4f4f4;
+}
+
+
+/******
+* 0.总体框架
+******/
+#grid{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+/******
+* 1.顶部工具栏 #nav
+******/
+#nav{
+    display: inline-block;
+	width: 220px;
+    height: 100%;
+    background-color: #fff;
+
+    color: #333;
+	font-size: 14px;
+    vertical-align: top;
+}
+
+#nav:after{
+	display: block;
+	content: '';
+	position: absolute;
+		top: 0;
+		left: 220px;
+
+	width: 1px;
+	height: 100%;
+	background-color: #eaeaea;
+	z-index: 99;
+}
+
+/******
+* 1.1检索栏 #nav #fileSearch******/
+#fileSearch{
+	position: relative;
+	height: 40px;
+	width: auto;
+	line-height: 100%;
+
+	font-size: 0;
+	background-color: #fff;
+	z-index: 10;
+}
+
+#fileSearch:after{
+	display: block;
+	content: '';
+	position: absolute;
+		bottom: 0;
+		left: 5%;
+
+	width: 90%;
+	height: 1px;
+	background-color: #eaeaea;
+}
+
+#fileSearch-mobile label,
+#fileSearch label{
+		top: 0;
+	width: 40px;
+	height: 100%;
+	line-height: 40px;
+	margin: 0;
+
+	font-size: 18px;
+	color: #106ebe;
+	vertical-align: bottom;
+}
+
+#fileSearch-mobile label:before,
+#fileSearch label:before{
+	display: block;
+	text-align: center;
+}
+
+#fileSearch-mobile input,
+#fileSearch input{
+	width: 180px;
+	height: 100%;
+	padding: 0;
+	background-color: transparent;
+	font-size: 16px;
+	text-indent: .5em;
+}
+/******
+* 1.2左侧导航栏 leftNav ******/
+#leftNav{
+	height: 100%;
+	padding-top: 30px;
+	background-color: #fff;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#leftNav .dropdown .btn{
+	width: 100%;
+	padding:0 40px;
+	border: 0;
+	background-image: none;
+	background-color: transparent;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+#leftNav .dropdown .btn>i{
+    position: absolute;
+    	top: 50%;
+	margin: -0.5em 0 0 -1.5em;
+}
+
+#leftNav .dropdown .btn>span{
+    display: block;
+    width: 8em;
+
+    font-size: 18px;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}
+
+#leftNav .dropdown,
+#leftNav .dropdown .btn,
+#leftNav .dropdown ul{
+	text-align: left;
+}
+
+#leftNav .dropdown-menu{
+	position: absolute;
+		left: 0;
+	border: 0;
+
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    text-indent: 40px;
+	z-index: 10;
+}
+
+#leftNav .dropdown-menu .selected{
+	position: relative;
+	background-color: #f4f4f4;
+}
+#leftNav .dropdown-menu .selected:before{
+	content: '';
+	display: block;
+	position: absolute;
+		top: 0；
+		left: 0;
+	width: 3px;
+	height: 100%;
+	background-color: #0078D7;
+}
+
+/******
+* 2.主要内容 main
+******/
+#main{
+	width: 100%;
+	vertical-align: top;
+}
+
+/******
+* 2.1文件工具栏 #tools******/
+#tools{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 100%;
+	background-color: #f4f4f4;
+}
+
+#tools:before{
+	display: block;
+	content: '';
+	position: absolute;
+		bottom: 0.25em;
+		left: 5%;
+
+	width: 90%;
+	height: 1px;
+	background-color: #f4f4f4;
+	z-index: 10;
+}
+
+#fileTools{
+	position: absolute;
+		top: 0;
+		left: 0;
+}
+
+#flodTools{
+	position: absolute;
+		top: 0;
+		right: 0;
+}
+
+#tools>ul,
+#tools li[name],
+#tools li[name]>a{
+	height: 100%;
+	line-height: 100%;
+	border: 0;
+}
+
+#tools li.hover,
+#tools li:hover{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-color: #eaeae9;
+	z-index: 10;
+}
+
+#tools li.hover>a,
+#tools li:hover>a{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/*** 2.1.1工具栏按钮通常样式 tools .nav a***/
+#tools .nav li[name]>a{
+	position: relative;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	border-radius: 0;
+
+	background-image: none;
+	background-color: transparent;
+	font-size: 17px;
+	text-align: center;
+}
+#tools .nav a:hover{
+	background-image: none;
+	background-color: transparent;
+}
+
+#tools i:before{
+	color: #106ebe;
+}
+
+#tools .nav li[name] i,
+#tools .nav li[name] span{
+	vertical-align: middle;
+}
+
+#tools .nav li[name] .glyphicon-menu-down,
+#tools .nav li[name] .glyphicon-menu-right{
+	vertical-align: top;
+}
+
+#tools #flodTools .dropdown .glyphicon-menu-down{
+	vertical-align: baseline;
+}
+
+#tools .nav span{
+	font-size: 14px;
+	color: #666;
+}
+
+#tools .glyphicon-menu-down:before,
+#tools .glyphicon-menu-up:before{
+	margin-left: 0.25em;
+	font-size: 12px;
+	color: #666;
+}
+
+/*** 2.1.2工具栏按钮选中样式 tools .nav a***/
+#tools .nav .active li[name] a{
+	background-color: #d0d0d0;
+}
+
+/*** 2.1.3工具栏按钮选的下拉菜单 tools .dropdown***/
+#tools .open .dropdown-menu{
+	display: inline-table;
+	margin-top: 8px;
+	box-shadow: 0 0px 12px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 0px 12px rgba(0,0,0,.25);
+}
+
+#tools .dropdown-menu li{
+	position: relative;
+}
+
+#tools .dropdown-menu .divider{
+    height: 1px;
+	margin: 0;
+}
+
+#tools .dropdown-menu-right a{
+	padding-left: 34px;
+}
+
+#tools .dropdown-menu i{
+	position: absolute;
+	    top: 50%;
+	    left: 0.5em;
+	margin-top: -0.5em;
+}
+
+/******
+* 2.2 移动端文件工具 fileTools-mobile ******/
+#fileTools-mobile{
+	background-color: #f4f4f4;
+}
+
+#fileTools-mobile>div{
+	top: 0;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+	vertical-align: middle;
+}
+
+#fileTools-mobile>div:not(:first-child){
+	padding: 0 0.5em;
+}
+
+/****** 2.2.1 检索工具栏 fileSearch-mobile ******/
+#fileSearch-mobile .glyphicon-arrow-right{
+	background-color: #fff;
+}
+
+#fileSearch-mobile input{
+    position: absolute;
+    	top: 0;
+    	left: 40px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+}
+
+/****** 2.2.2 下拉菜单按钮以及菜单 toolShow-mobile ******/
+#toolShow-mobile button{
+    float: none;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#tools .mobile #toolsDialog-mobile{
+    position: absolute;
+    	top: 40px;
+    	left: 72px;
+    height: 200px;
+    width: 120%;
+    margin-top: 8px;
+
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0px 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 0px 12px rgba(0,0,0,.25);
+	z-index: 18;
+}
+
+#tools .mobile>li:not(.sr-only):first-child{
+	margin-top: 8px;
+	visibility: hidden;
+}
+
+#tools .mobile>li:not(.sr-only){
+		left: 72px;
+	float: none;
+	width: 120%;
+	z-index: 19;
+}
+
+#tools .mobile>li:not(.sr-only)>a{
+	padding-left: 1em;
+	text-align: left;
+}
+
+#tools .mobile .dropdown-menu{
+	top: 0;
+	left: 105%;
+}
+
+#tools .mobile .glyphicon-menu-right:before{
+	font-size: 12px;
+	color: #999;
+}
+/******
+* 2.3文件显示 content ******/
+#content{
+	position: relative;
+	padding: 20px 32px 0;
+}
+
+#content.show-docInfo{
+	padding-right: 220px;
+}
+
+/*** 2.3.1文件层级关系显示 ***/
+#fileDirectory{}
+
+#fileMenu p{
+	position: relative;
+	display: inline-block;
+	margin: 0 1.5em 0 0;
+	font-size: 21px;
+}
+#fileMenu p:not(:last-child) span{
+	padding: 2px 0.5em;
+	cursor: pointer;
+}
+#fileMenu p:not(:last-child):hover{
+	background-color: #eaeae9;
+}
+
+#fileMenu i{
+	position: absolute;
+		top: 50%;
+		left: -1.5em;
+	margin-top: -0.5em;
+}
+
+/*** 2.3.2表格组件 ***/
+#fileList,
+#fileList td{
+	position: relative;
+	border: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+#fileList thead th:hover,
+#fileList tbody tr:hover{
+	background-color: #f4f4f4;
+}
+#fileList .selected{
+	background-color: #eaeaea;
+}
+
+#fileList .glyphicon-ok{
+	position: relative;
+	color: #999;
+	font-size: 14px;
+	cursor: pointer;
+}
+#fileList .glyphicon-ok-circle{
+	position: absolute;
+	    top: 50%;
+    margin: -0.5em -0.25em;
+	color: #3a96dd;
+	font-size: 24px;
+}
+/******
+* 3.文件详细信息 fileInfo ******/
+#docInfo{
+	position: absolute;
+		right: 0;
+	width: 220px;
+	height: 100%;
+	background-color: #fff;
+}
