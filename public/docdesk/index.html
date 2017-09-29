@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="./public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./public/css/docdesk.css">
+	<script src="./public/js/jquery-3.2.1.min.js" ></script>
+	<script src="./public/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div id="grid">
+	<div id="nav" class="hidden-xs">
+		<!-- 检索栏 -->
+		<div id="fileSearch">
+			<label for="search" class="glyphicon glyphicon-search"></label>
+			<input type="text" name="search" class="hidden-xs" placeholder="检索" />
+		</div>
+
+		<!-- 信息列表 -->
+		<div id="leftNav">
+			<div class="dropdown">
+			    <a id="showFlodMenu" class="btn btn-default" data-toggle="collapse" data-target="#flodMenu"  aria-expanded="true" >
+			        <i class="glyphicon glyphicon-menu-up"></i>
+			        <span id="userName">yourName</span>
+			    </a>
+			    <ul id="flodMenu" class="dropdown-menu dropdown-menu-right collapse in" aria-expanded="true" >
+			        <li class="selected"><a href="#">文件</a></li>
+			        <li><a href="#">共享给我的</a></li>
+			        <li><a href="#">回收站</a></li>
+			    </ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="main">
+		<!-- 工具栏 -->
+		<div id="tools">
+			<!-- 文件工具 -->
+			<ul id="fileTools" class="nav nav-pills hidden-xs">
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docNew" data-toggle="dropdown">
+				        <i class="glyphicon glyphicon-plus" ></i>
+						<span>新建</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docNew">
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">文件夹</a></li>
+		                <li role="separator" class="divider">分割线</li>
+				        <li>
+							<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">World 文档</a>
+			        	</li>
+				        <li>
+							<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">Excel 工作簿</a>
+			        	</li>
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">PowerPoint 演示文稿</a>
+			        	</li>
+				    </ul>
+				</li>
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docUpdata" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-upload" ></i>
+						<span>上传</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu" aria-labelledby="docUpdata">
+				        <li><a href="#">文&nbsp;件</a></li>
+				        <li><a href="#">文件夹</a></li>
+				    </ul>
+				</li>
+				<li name="auto">
+				    <a href="#">
+						<i class="glyphicon glyphicon-refresh" ></i>
+						<span>同步</span>
+				    </a>
+				</li>
+				<li name="file" class="dropdown sr-only">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docOpen" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-book" ></i>
+						<span>打开</span>
+						<i class="glyphicon glyphicon-menu-down" ></i>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docOpen">
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">在X中打开</a>
+				        </li>
+				        <li>
+				        	<i class="glyphicon glyphicon-bookmark"></i>
+				        	<a href="#">在Y中打开</a>
+			        	</li>
+				    </ul>
+				</li>
+				<li name="sigle" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-send" ></i>
+						<span>共享</span>
+					</a>
+				</li>
+				<li name="sigle" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-link" ></i>
+						<span>获取链接</span>
+					</a>
+				</li>
+				<li name="file" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-download" ></i>
+						<span>下载</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-trash" ></i>
+						<span>删除</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-share-alt" ></i>
+						<span>移动到</span>
+					</a>
+				</li>
+				<li name="base" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-duplicate" ></i>
+						<span>复制到</span>
+					</a>
+				</li>
+				<li name="rename" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-edit" ></i>
+						<span>重命名</span>
+					</a>
+				</li>
+				<li name="file" class="sr-only">
+					<a href="#">
+						<i class="glyphicon glyphicon-leaf" ></i>
+						<span>版本历史记录</span>
+					</a>
+				</li>
+				<li id="toolsDialog-mobile" class="sr-only"></li>
+			</ul>
+			<!-- 移动端文件工具 -->
+			<div id="fileTools-mobile">
+				<div name id="fileSearch-mobile" class="visible-xs-inline-block">
+					<label for="search" class="glyphicon glyphicon-search"></label>
+					<input type="text" name="search" class="sr-only" placeholder="检索" />
+				</div>
+				<div id="firstTool-mobile" class="visible-xs-inline-block">
+					<i class="glyphicon glyphicon-plus"></i>
+				</div>
+			    <div id="toolShow-mobile" class="navbar-header visible-xs-inline-block">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fileTools" aria-expanded="false" id="tools-mobile">
+						<i class="glyphicon glyphicon-option-horizontal"></i>
+					</button>
+				</div>
+			</div>
+			<!-- 文件夹工具 -->
+			<ul id="flodTools" class="nav nav-pills">
+				<li name="auto" class="dropdown">
+				    <a class="btn btn-default dropdown-toggle" type="button" id="docSort" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-sort-by-attributes-alt" ></i>
+						<span class="hidden-xs">
+							排序
+							<i class="glyphicon glyphicon-menu-down" ></i>
+						</span>
+				    </a>
+				    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="docSort">
+				        <li>
+				        	<i class="glyphicon glyphicon-ok" ></i>
+				        	<a href="#">功能</a>
+				        </li>
+		                <li role="separator" class="divider">分割线</li>
+				        <li>
+				        	<i class="glyphicon glyphicon-ok" ></i>
+				        	<a href="#">升序</a>
+			        	</li>
+				        <li><a href="#">降序</a></li>
+				    </ul>
+				</li>
+				<li name="auto">
+					<a href="#">
+						<i class="glyphicon glyphicon-th-list" ></i>
+					</a>
+				</li>
+				<li name="file" class="sr-only hidden-xs">
+					<a href="#">
+						<span>已选中<span>X</span>项</span>
+						<i class="glyphicon glyphicon-remove" ></i>
+					</a>
+				</li>
+				<li name="keep" class="hidden-xs">
+					<a href="#">
+						<i class="glyphicon glyphicon glyphicon-info-sign" ></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="fileDirectory">
+				<h2 id="flodPower">文件</h2>
+				<div id="fileMenu" class="sr-only">
+					<p>
+						<span>文件</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-menu-right"></i>
+						<span>文件</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-menu-right"></i>
+						<span>文件</span>
+					</p>
+				</div>
+			</div>
+			<!-- 文件列表 -->
+			<div id="fileList" class="panel panel-default">
+			  <table class="table">
+			  	<thead class="hidden-xs">
+					<tr>
+						<th><i class="glyphicon glyphicon-ok"></i></th>
+						<th class="fileName">文件名</th>
+						<th class="editTime">修改时间</th>
+						<th class="editor">修改人</th>
+						<th class="fileSize">文件大小</th>
+						<th class="fileshare">共享</th>
+					</tr>
+			    </thead>
+			    <tbody>
+				    <tr>
+				    	<td class="hidden-xs"><i class="glyphicon glyphicon-ok-circle"></i></td>
+				    	<td class="visible-xs-inline-block"><i class="glyphicon glyphicon-ok-circle"></i></td>
+				    	<td class="fileName">文件名</td>
+				    	<td class="editTime">修改时间</td>
+				    	<td class="editor hidden-xs">修改人</td>
+				    	<td class="fileSize hidden-xs">文件大小</td>
+				    	<td class="fileshare hidden-xs">共享</td>
+				    </tr>
+				    <tr class="selected">
+				    	<td class="col-xs-"><i class="glyphicon glyphicon-ok"></i></td>
+				    	<td class="fileName">文件名</td>
+				    	<td class="editTime">修改时间</td>
+				    	<td class="editor hidden-xs">修改人</td>
+				    	<td class="fileSize hidden-xs">文件大小</td>
+				    	<td class="fileshare hidden-xs">共享</td>
+				    </tr>
+			    </tbody>
+			  </table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+$(function(){
+	//docDisk
+	var docDisk = {
+		init: function(){
+			this.renderData();
+			this.bindEvent();
+			func.checkStatus();
+		},
+		//渲染数据
+		renderData: function(){
+
+		},
+		//事件绑定
+		bindEvent: function(){
+			// 下拉菜单优化
+			$('.dropdown').on('show.bs.dropdown', function(){
+				$(this).closest('li').addClass('hover');
+				$(this).find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+			}).on('hide.bs.dropdown', function(){
+				$(this).closest('li').removeClass('hover');
+				$(this).find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down')
+			});
+			/******
+			* 顶部工具栏事件
+			******/
+			// PC端检索栏
+			$('#fileSearch input[name="search"]').on('click', function(){
+				$(this).siblings('label').addClass('sr-only')
+			});
+
+			$('#fileSearch input[name="search"]').on('blur',function(){
+				$(this).siblings('label').removeClass('sr-only glyphicon-arrow-right').addClass('glyphicon-search');
+			});
+
+			// 移动端检索栏
+			$('#fileSearch-mobile label').on('click', function(){
+				$(this).siblings('input').removeClass('sr-only').focus();
+				$(this).removeClass('glyphicon-search').addClass('glyphicon-arrow-right');
+			});
+
+			$('#fileSearch-mobile input[name="search"]').on('blur',function(){
+				$('#fileSearch-mobile label').removeClass('sr-only glyphicon-arrow-right').addClass('glyphicon-search');
+				$('#fileSearch-mobile input').addClass('sr-only');
+			});
+
+			// 移动端首个功能图标
+
+			// 移动端更多功能图标
+			$('#fileTools').on('show.bs.collapse', function(){
+				$(this).removeClass('hidden-xs').addClass('mobile');
+				$('#fileTools .glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-right');
+				$('#toolsDialog-mobile').removeClass('sr-only');
+
+				// 调整弹窗的高度 减去首个和弹窗
+				let len = $('#fileTools>li:not(.sr-only)').length - 2;
+				if($('#toolsDialog-mobile').height() !== '80px')$('#toolsDialog-mobile').height(len*40 + 'px');
+			});
+
+			$('#fileTools').on('blur', function(){
+				if(!$('.mobile').length) return false;
+				$('#fileTools').collapse('hide');
+			});
+
+
+			/******
+			* 左侧导航栏事件
+			******/
+			// 左侧下拉菜单事件切换
+			$('#flodMenu').on('shown.bs.collapse', function(){
+			  	$(this).siblings('#showFlodMenu').find('.glyphicon').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+			})
+			$('#flodMenu').on('hide.bs.collapse', function(){
+				$(this).siblings('#showFlodMenu').find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+			})
+
+			// 左侧下拉菜单点击事件
+			$('#flodMenu li').on('click', function(){
+				const flodName = $(this).find('a').html();
+				// 标签样式切换
+				if(!$(this).hasClass('selected')){
+					var foldPower = $(this).siblings('li');
+					foldPower.removeClass('selected');
+					$(this).addClass('selected');
+				};
+				// 文件显示刷新
+				$('#fileDirectory>h2').text(flodName);
+				$('#fileDirectory h3:first-child').text(flodName);
+			});
+
+			/******
+			* 文件显示区域事件
+			******/
+
+
+			/******
+			* 右侧工具栏事件
+			******/
+		}
+	},
+	//func 公共方法
+	func = {
+		/******
+		* 导航栏按钮分类 .nav li[name]
+		* @ auto: 默认功能,未选中时生效，新建，上传，同步，排序，视图
+		* @ sigle: 单文件选中有效[文件夹中未选中]，共享，获取链接
+		* @ base: 选中即生效，删除，移动，复制
+		* @ file: 选中文件时生效，打开，下载，选中数量，版本历史记录
+		* @ 独立生效 keep: 选中对象信息, rename: 重命名
+		******/
+		// 获取选中信息
+		getStatus: function(){
+			let status = {
+				level: 0,			// 层级
+				isSleected: false,	// 选中文件
+				isSigle: false,		// 选中数量是否为 1
+				isFile: false       // 单选对象是否文件
+			};
+			return status
+		},
+		// 状态校验
+		checkStatus: function(){
+			const status = this.getStatus();
+			console.log(status);
+			// 隐藏原有的按钮 && 显示新的按钮
+			$('#tool-grid li[name]:not([name="keep"])').addClass('sr-only');
+			if(!status.isSleected){
+				$('#tool-grid li[name="auto"]').removeClass('sr-only');
+				if(status.level !== 0) $('#tool-grid li[name="sigle"]').removeClass('sr-only');
+			}else if(status.isSigle){
+				$('#tool-grid li[name="sigle"], #tool-grid li[name="rename"], #tool-grid li[name="base"]').removeClass('sr-only');
+				if(status.isFile) $('#tool-grid li[name="file"]').removeClass('sr-only');
+			}else{
+				$('#tool-grid li[name="base"]').removeClass('sr-only');
+			}
+		}
+	};
+
+	docDisk.init();
+});
+
+</script>
+</html>
