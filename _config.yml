@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hello World
-subtitle:
+title: 红糖的蜜罐
+subtitle: 
 description: 世界那么大，我想去看看
-author: ZhaoY
+author: 红糖
 language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://github.com/zhaoyang01/zhaoyang01.github.io
-root: /public/index.html
+url: https://github.com/zhaoyang01/zhaoyang01.github.io/public/
+root: /public/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
